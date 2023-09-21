@@ -131,7 +131,27 @@ TRUE)</p></dd>
 <span class="r-in"><span>               tv_confounders <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A.1"</span>, <span class="st">"A.2"</span>, <span class="st">"A.3"</span>, <span class="st">"B.1"</span>, <span class="st">"B.2"</span>, <span class="st">"B.3"</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>               time_pts <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Summary of Exposure Main Effects: </span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in loadNamespace(x):</span> there is no package called ‘psych’</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     vars  n  mean   sd   min  max range   se</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A.1    1 50  0.04 0.98 -1.93 1.95  3.88 0.14</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A.2    2 50 -0.17 0.80 -2.07 1.97  4.04 0.11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A.3    3 50 -0.10 1.04 -2.62 2.20  4.82 0.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> USER ALERT: Out of the total of 50 individuals in the sample, below is the distribution of the 50 (100%) that fall into 8 out of the 8 the total user-defined exposure histories created from median split values for low and high levels of exposure A, respectively, across 1, 2, 3 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> USER ALERT: Please inspect the distribution of the sample across the following exposure histories and ensure there is sufficient spread to avoid extrapolation and low precision: </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Table: Summary of user-specified exposure A histories based on exposure main effects 1, 2, 3 containing time points 1, 2, 3:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |history |  n|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |:-------|--:|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |l-h-h   |  6|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |h-h-h   |  7|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |l-l-h   |  7|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |h-l-l   |  7|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |l-l-l   |  6|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |h-l-h   |  5|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |h-h-l   |  6|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |l-h-l   |  6|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span><span class="va">h</span> <span class="op">&lt;-</span> <span class="fu">eval_hist</span><span class="op">(</span>data <span class="op">=</span> <span class="va">test</span>,</span></span>
 <span class="r-in"><span>               exposure <span class="op">=</span> <span class="st">"A"</span>,</span></span>
 <span class="r-in"><span>               tv_confounders <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A.1"</span>, <span class="st">"A.2"</span>, <span class="st">"A.3"</span>, <span class="st">"B.1"</span>, <span class="st">"B.2"</span>, <span class="st">"B.3"</span><span class="op">)</span>,</span></span>
@@ -139,14 +159,50 @@ TRUE)</p></dd>
 <span class="r-in"><span>               epochs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>epochs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Infancy"</span>, <span class="st">"Toddlerhood"</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>                                   values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/AsIs.html" class="external-link">I</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Summary of Exposure Main Effects: </span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in loadNamespace(x):</span> there is no package called ‘psych’</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>               vars  n  mean   sd   min  max range   se</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A_Infancy        1 50 -0.07 0.64 -1.31 1.03  2.34 0.09</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A_Toddlerhood    2 50 -0.10 1.04 -2.62 2.20  4.82 0.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> USER ALERT: Out of the total of 50 individuals in the sample, below is the distribution of the 50 (100%) that fall into 4 out of the 4 the total user-defined exposure histories created from median split values for low and high levels of exposure A, respectively, across Infancy, Toddlerhood </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> USER ALERT: Please inspect the distribution of the sample across the following exposure histories and ensure there is sufficient spread to avoid extrapolation and low precision: </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Table: Summary of user-specified exposure A histories based on exposure main effects Infancy, Toddlerhood containing time points c(1, 2), 3:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |history |  n|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |:-------|--:|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |l-h     | 14|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |h-h     | 11|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |h-l     | 14|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |l-l     | 11|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span><span class="va">h</span> <span class="op">&lt;-</span> <span class="fu">eval_hist</span><span class="op">(</span>data <span class="op">=</span> <span class="va">test</span>,</span></span>
 <span class="r-in"><span>               exposure <span class="op">=</span> <span class="st">"A"</span>,</span></span>
 <span class="r-in"><span>               tv_confounders <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A.1"</span>, <span class="st">"A.2"</span>, <span class="st">"A.3"</span>, <span class="st">"B.1"</span>, <span class="st">"B.2"</span>, <span class="st">"B.3"</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>               time_pts <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>               hi_lo_cut <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.6</span>, <span class="fl">0.3</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Summary of Exposure Main Effects: </span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in loadNamespace(x):</span> there is no package called ‘psych’</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     vars  n  mean   sd   min  max range   se</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A.1    1 50  0.04 0.98 -1.93 1.95  3.88 0.14</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A.2    2 50 -0.17 0.80 -2.07 1.97  4.04 0.11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A.3    3 50 -0.10 1.04 -2.62 2.20  4.82 0.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> USER ALERT: Out of the total of 50 individuals in the sample, below is the distribution of the 14 (28%) that fall into 7 out of the 8 the total user-defined exposure histories created from 30th and 60th percentile values for low and high levels of exposure A, respectively, across 1, 2, 3 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> USER ALERT: Please inspect the distribution of the sample across the following exposure histories and ensure there is sufficient spread to avoid extrapolation and low precision: </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> USER ALERT: There are no individuals in your sample that fall into l-h-l exposure history/histories. You may wish to consider different high/low cutoffs (for continuous exposures), alternative epochs, or choose a different measure to avoid extrapolation. </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Table: Summary of user-specified exposure A histories based on exposure main effects 1, 2, 3 containing time points 1, 2, 3:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |history |  n|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |:-------|--:|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |l-h-h   |  3|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |h-h-h   |  4|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |h-l-h   |  1|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |h-l-l   |  2|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |l-l-h   |  2|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |l-l-l   |  1|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |h-h-l   |  1|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span><span class="va">h</span> <span class="op">&lt;-</span> <span class="fu">eval_hist</span><span class="op">(</span>data <span class="op">=</span> <span class="va">test</span>,</span></span>
 <span class="r-in"><span>               exposure <span class="op">=</span> <span class="st">"A"</span>,</span></span>
 <span class="r-in"><span>               tv_confounders <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A.1"</span>, <span class="st">"A.2"</span>, <span class="st">"A.3"</span>, <span class="st">"B.1"</span>, <span class="st">"B.2"</span>, <span class="st">"B.3"</span><span class="op">)</span>,</span></span>
@@ -155,7 +211,21 @@ TRUE)</p></dd>
 <span class="r-in"><span>               ref <span class="op">=</span> <span class="st">"l-l-l"</span>,</span></span>
 <span class="r-in"><span>               comps <span class="op">=</span> <span class="st">"h-h-h"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Summary of Exposure Main Effects: </span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in loadNamespace(x):</span> there is no package called ‘psych’</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     vars  n  mean   sd   min  max range   se</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A.1    1 50  0.04 0.98 -1.93 1.95  3.88 0.14</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A.2    2 50 -0.17 0.80 -2.07 1.97  4.04 0.11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A.3    3 50 -0.10 1.04 -2.62 2.20  4.82 0.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> USER ALERT: Out of the total of 50 individuals in the sample, below is the distribution of the 5 (10%) that fall into 2 out of the 2 the total user-defined exposure histories created from 30th and 60th percentile values for low and high levels of exposure A, respectively, across 1, 2, 3 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> USER ALERT: Please inspect the distribution of the sample across the following exposure histories and ensure there is sufficient spread to avoid extrapolation and low precision: </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Table: Summary of user-specified exposure A histories based on exposure main effects 1, 2, 3 containing time points 1, 2, 3:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |history |  n|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |:-------|--:|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |h-h-h   |  4|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |l-l-l   |  1|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 </code></pre></div>
     </div>
   </div>
